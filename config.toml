@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "room-weighing-335g.netlify.app"
+base_url = "335g.vercel.app/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
