@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f3e06660a7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="destyle.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
 
     <title>
     {% block title %}
@@ -18,7 +18,9 @@
     <header>
         <div class="wrapper">
             <div id="me">
-                <img src="icons/avatar.png" alt="me">
+                <a href="{{ config.base_url }}">
+                    <img src="{{ get_url(path='icons/avatar.png') }}" alt="me">
+                </a>
             </div>
             <div id="twitter">
                 <a href="https://twitter.com/335g">
@@ -46,26 +48,11 @@
         </div>
     </header>
     <div id="main">
-
+        {% block content %}
+        {% endblock content %}
     </div>
     <footer>
         Copyright © 2022 Yoshiki Kudo (335g) All Rights Reserved.
     </footer>
 </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <script src="https://kit.fontawesome.com/f3e06660a7.js" crossorigin="anonymous"></script>
-    <link href="{{ get_url(path='main.css') }}" rel="stylesheet">
-</head>
-<body>
-    <section class="section">
-        <div class="container">
-            {% block content %} {% endblock %}
-        </div>
-    </section>
-</body>
-</html> -->

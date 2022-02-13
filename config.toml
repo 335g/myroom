@@ -8,6 +8,7 @@ compile_sass = true
 build_search_index = true
 
 title = "Something that weighs 335g"
+description = "portfolio, blogs, and more..."
 
 [markdown]
 # Whether to do syntax highlighting
